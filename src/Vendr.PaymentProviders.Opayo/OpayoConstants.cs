@@ -13,6 +13,7 @@
             public const string Description = "Description";
             public const string NotificationURL = "NotificationURL";
             public const string Basket = "Basket";
+            public const string Email = "CustomerEMail";
             public static class Billing
             {
                 public const string Surname = "BillingSurname";

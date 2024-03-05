@@ -51,7 +51,9 @@ namespace Vendr.PaymentProviders.Opayo
                     description = tempStore.Value.Truncate(100);
             }
             inputFields.Add(OpayoConstants.TransactionRequestFields.Description, description);
-            
+
+            settings.OrderPropertyCustomerEmailAddress.MustNotBeNullOrWhiteSpace(nameof(settings.OrderPropertyCustomerEmailAddress));
+            inputFields.Add(OpayoConstants.TransactionRequestFields.Email, order.Properties[settings.OrderPropertyCustomerEmailAddress]);
 
             LoadBillingDetails(inputFields, order, settings, context);
             LoadShippingDetails(inputFields, order, settings, context);

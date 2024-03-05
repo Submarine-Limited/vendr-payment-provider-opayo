@@ -23,6 +23,13 @@ namespace Vendr.PaymentProviders.Opayo
         [PaymentProviderSetting(Name ="Transaction Type", IsAdvanced =true, Description ="Transaction Type: PAYMENT, DEFERRED, AUTHENTICATE", SortOrder = 1000)]
         public string TxType { get; set; }
 
+
+
+        [PaymentProviderSetting(Name = "Order property alias: Customer Email Address", Description = "Order property alias containing the customer's email address", SortOrder = 90)]
+        public string OrderPropertyCustomerEmailAddress { get; set; }
+
+
+
         [PaymentProviderSetting(Name = "Order property alias: Billing Last Name", Description = "Order property alias containing the billing last name", SortOrder = 100)]
         public string OrderPropertyBillingLastName { get; set; }
 
