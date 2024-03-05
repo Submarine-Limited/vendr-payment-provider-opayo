@@ -67,30 +67,30 @@ namespace Vendr.PaymentProviders.Opayo.Api
                     switch (type.ToUpperInvariant())
                     {
                         case "AUTHORISE":
-                            return "https://live.sagepay.com/gateway/service/authorise.vsp";
+                            return "https://live.opayo.eu.elavon.com/gateway/service/authorise.vsp";
                         case "PAYMENT":
                         case "DEFERRED":
                         case "AUTHENTICATE":
-                            return "https://live.sagepay.com/gateway/service/vspserver-register.vsp";
+                            return "https://live.opayo.eu.elavon.com/gateway/service/vspserver-register.vsp";
                         case "CANCEL":
-                            return "https://live.sagepay.com/gateway/service/cancel.vsp";
+                            return "https://live.opayo.eu.elavon.com/gateway/service/cancel.vsp";
                         case "REFUND":
-                            return "https://live.sagepay.com/gateway/service/refund.vsp";
+                            return "https://live.opayo.eu.elavon.com/gateway/service/refund.vsp";
                     }
                     break;
                 case true:
                     switch (type.ToUpperInvariant())
                     {
                         case "AUTHORISE":
-                            return "https://test.sagepay.com/gateway/service/authorise.vsp";
+                            return "https://sandbox.opayo.eu.elavon.com/gateway/service/authorise.vsp";
                         case "PAYMENT":
                         case "DEFERRED":
                         case "AUTHENTICATE":
-                            return "https://test.sagepay.com/gateway/service/vspserver-register.vsp";
+                            return "https://sandbox.opayo.eu.elavon.com/gateway/service/vspserver-register.vsp";
                         case "CANCEL":
-                            return "https://test.sagepay.com/gateway/service/cancel.vsp";
+                            return "https://sandbox.opayo.eu.elavon.com/gateway/service/cancel.vsp";
                         case "REFUND":
-                            return "https://test.sagepay.com/gateway/service/refund.vsp";
+                            return "https://sandbox.opayo.eu.elavon.com/gateway/service/refund.vsp";
                     }
                     break;
             }
